@@ -1,12 +1,11 @@
 #!/bin/bash
-# export DJANGO_SETTINGS_MODULE=project.settings_test
 source $(dirname $0)/.init.rc
 
 set -x
 py.test \
 	--durations=5 \
 	-v \
-    --cov project \
+    --cov src \
     --cov tests \
     --cov-report term-missing \
     --cov-report html \
